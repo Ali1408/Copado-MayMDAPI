@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # chmod +x blank_profiles.sh
-# ./blank_profiles.sh path/to/profiles/
+# ./blank_profiles.sh /profiles
 
 github_repo_path="${1:-/profiles}"
 
