@@ -3,9 +3,20 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Profile_Blank_Poc__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Testing__c.Testingfield__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Pre_Blank_Test__c-Pre Blank Test Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Testing__c-Testing Layout</layout>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
