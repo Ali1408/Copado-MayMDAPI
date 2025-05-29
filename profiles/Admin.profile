@@ -27,6 +27,9 @@
     <layoutAssignments>
         <layout>ConsumptionRate-Consumption Rate Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>ConsumptionSchedule-Consumption Schedule Layout</layout>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
