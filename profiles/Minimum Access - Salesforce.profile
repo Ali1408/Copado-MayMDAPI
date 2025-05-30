@@ -2153,6 +2153,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Pre_Blank_Test__c.US32__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product2.Description</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2742,6 +2747,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Testing__c.Testingfield__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>WorkOrder.AccountId</field>
         <readable>true</readable>
@@ -3088,6 +3098,9 @@
         <layout>LiveChatTranscriptWaiting-Chat Transcript %28Waiting%29 Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Pre_Blank_Test__c-Pre Blank Test Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ProcessException-Process Exception Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -3095,6 +3108,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Seller-Seller Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Testing__c-Testing Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrder-Work Order Layout</layout>
