@@ -6,7 +6,7 @@
 github_repo_path="${1:-/profiles}"
 
 if [ ! -d "$github_repo_path" ]; then
-  echo "❌ ❌ ❌ ❌ ❌ ❌ Folder '$github_repo_path' not found.❌ ❌ ❌ ❌ ❌ "
+  echo "❌ Folder '$github_repo_path' not found."
   exit 1
 fi
 
@@ -19,47 +19,43 @@ count_skipped=0
 
 echo "🔍 Total .profile files in '$github_repo_path': $total_files"
 
-# Define the desired blank content
-blank_content='<?xml version="1.0" encoding="UTF-8"?>
-<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-</Profile>'
-
 for file in "$github_repo_path"/*.profile; do
   if [ -f "$file" ]; then
-    if grep -q "<userPermissions>" "$file"; then
-      echo "⏭️ Skipping $file (contains <userPermissions>)"
-      ((count_skipped++))
-    else
-      existing_content=$(<"$file")
-      if [[ "$existing_content" != "$blank_content" ]]; then
-        echo "$blank_content" > "$file"
-        echo "✏️ Blanked $file"
-        ((count_modified++))
-      else
-        ((count_skipped++))
-      fi
-    fi
+    # Extract only userPermissions
+    user_permissions=$(xmllint --xpath "//userPermissions" "$file" 2>/dev/null)
+
+    # Form new content
+    new_content='<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+'"$user_permissions"'
+</Profile>'
+
+    echo "$new_content" > "$file"
+    echo "✏️ Rewritten (userPermissions preserved): $file"
+    ((count_modified++))
+  else
+    ((count_skipped++))
   fi
 done
 
-echo "✅ ✅ ✅ ✅ ✅ Blanked $count_modified profile files. Skipped (contains <userPermissions> or already blank): $count_skipped ✅ ✅ ✅ ✅ ✅ "
+echo "✅ Modified: $count_modified, Skipped: $count_skipped"
 
-read -p "🚀 🚀 🚀 🚀 🚀 Push $count_modified modified files to '$current_branch'❓❓❓❓❓ (y/n): " confirm 
+read -p "🚀 Push $count_modified modified files to '$current_branch'? (y/n): " confirm 
 if [ "$confirm" != "y" ]; then
-  echo "❌ ❌ ❌ ❌ ❌ Aborted. No changes were pushed.❌ ❌ ❌ ❌ ❌ "
+  echo "❌ Aborted. No changes were pushed."
   exit 0
 fi
 
 git add "$github_repo_path"
-commit_message="🔒 Profile files blanked (excluding those with userPermissions) on $(date '+%Y-%m-%d %H:%M:%S')"
+commit_message="🔒 Profiles blanked except userPermissions on $(date '+%Y-%m-%d %H:%M:%S')"
 git commit -m "$commit_message"
 git push origin "$current_branch"
 
-echo "🎉 Done. Total: $total_files, Blanked: $count_modified, Skipped: $count_skipped. Changes pushed to '$current_branch'."
+echo "🎉 Done. Pushed to '$current_branch'."
 
-# Optional: Discard local changes to this script after push
+# Reset this script if tracked
 script_name=$(basename "$0")
 if git ls-files --error-unmatch "$script_name" > /dev/null 2>&1; then
-  echo "🧹 Resetting '$script_name' to committed version to avoid Git tracking local edits."
+  echo "🧹 Resetting '$script_name' to committed version."
   git checkout -- "$script_name"
 fi
