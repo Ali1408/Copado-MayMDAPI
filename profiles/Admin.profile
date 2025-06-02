@@ -21,28 +21,29 @@ echo "🔍 Total .profile files in '$github_repo_path': $total_files"
 
 for file in "$github_repo_path"/*.profile; do
   if [ -f "$file" ]; then
-    # Remove namespace line temporarily for easier parsing
     tmp_file=$(mktemp)
+
+    # Strip the xmlns line for easier parsing
     grep -v 'xmlns=' "$file" > "$tmp_file"
 
-    # Extract userPermissions using grep/sed (namespace-safe)
+    # Extract <userPermissions> blocks (multi-line safe)
     user_permissions=$(sed -n '/<userPermissions>/,/<\/userPermissions>/p' "$tmp_file")
-
     rm "$tmp_file"
 
-    # Skip if no userPermissions found
+    # If no userPermissions found, clear content
     if [ -z "$user_permissions" ]; then
-      user_permissions=""
-    fi
-
-    # Write new file content
-    new_content='<?xml version="1.0" encoding="UTF-8"?>
+      new_content='<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+</Profile>'
+    else
+      new_content='<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
 '"$user_permissions"'
 </Profile>'
+    fi
 
     echo "$new_content" > "$file"
-    echo "✏️ Rewritten (only userPermissions preserved): $file"
+    echo "✏️ Processed: $file"
     ((count_modified++))
   else
     ((count_skipped++))
@@ -58,7 +59,7 @@ if [ "$confirm" != "y" ]; then
 fi
 
 git add "$github_repo_path"
-commit_message="🔒 Only userPermissions preserved in profile files on $(date '+%Y-%m-%d %H:%M:%S')"
+commit_message="🔒 Preserved only userPermissions in profile files on $(date '+%Y-%m-%d %H:%M:%S')"
 git commit -m "$commit_message"
 git push origin "$current_branch"
 
