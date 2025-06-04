@@ -39,22 +39,14 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>Search_Text</name>
-            <dataType>String</dataType>
-            <fieldText>Search Text1</fieldText>
-            <fieldType>InputField</fieldType>
-            <helpText>&lt;p&gt;A03269G3DNE&lt;/p&gt;</helpText>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>false</isRequired>
+            <name>Display1</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;A03269G3DNE&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Search_Text2</name>
-            <dataType>String</dataType>
-            <fieldText>Search Text2</fieldText>
-            <fieldType>InputField</fieldType>
-            <helpText>&lt;p&gt;TQDDPJTFD&lt;/p&gt;</helpText>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>false</isRequired>
+            <name>Display2</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;TQDDPJTFD&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
