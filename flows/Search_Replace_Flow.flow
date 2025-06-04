@@ -40,12 +40,12 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Display11</name>
-            <fieldText>{!Environment.StringValue_ID}</fieldText>
+            <fieldText>ABCD</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Display22</name>
-            <fieldText>{!Environment.StringValue_ID}</fieldText>
+            <fieldText>XYZ</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
