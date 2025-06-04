@@ -40,12 +40,12 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Display11</name>
-            <fieldText>&lt;p&gt;TQDDPJTFD&lt;/p&gt;</fieldText>
+            <fieldText>TQDDPJTFD</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Display22</name>
-            <fieldText>&lt;p&gt;A03269G3DNE&lt;/p&gt;</fieldText>
+            <fieldText>A03269G3DNE</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
