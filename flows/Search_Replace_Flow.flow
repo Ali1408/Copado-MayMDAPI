@@ -39,13 +39,13 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>Display1</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;A03269G3DNE&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <name>Display11</name>
+            <fieldText>&lt;p&gt;TQDDPJTFD&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Display2</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;TQDDPJTFD&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <name>Display22</name>
+            <fieldText>&lt;p&gt;A03269G3DNE&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
