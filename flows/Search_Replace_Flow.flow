@@ -43,7 +43,7 @@
             <dataType>String</dataType>
             <fieldText>Search Text1</fieldText>
             <fieldType>InputField</fieldType>
-            <helpText>&lt;p&gt;&amp;lt;stringValue&amp;gt;A03269G3DNE&amp;lt;/stringValue&amp;gt;&lt;/p&gt;</helpText>
+            <helpText>&lt;p&gt;A03269G3DNE&lt;/p&gt;</helpText>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
@@ -52,7 +52,7 @@
             <dataType>String</dataType>
             <fieldText>Search Text2</fieldText>
             <fieldType>InputField</fieldType>
-            <helpText>&lt;p&gt;&amp;lt;stringValue&amp;gt;TQDDPJTFD&amp;lt;/stringValue&amp;gt;&lt;/p&gt;</helpText>
+            <helpText>&lt;p&gt;TQDDPJTFD&lt;/p&gt;</helpText>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
