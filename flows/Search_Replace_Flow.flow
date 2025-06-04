@@ -40,12 +40,12 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Display1</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;A03269G3DNE&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;A03269G3DNE&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Display2</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;TQDDPJTFD&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;TQDDPJTFD&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
