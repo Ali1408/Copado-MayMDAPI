@@ -40,12 +40,12 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Display11</name>
-            <fieldText>{!Environment.StringValue_ID1}</fieldText>
+            <fieldText>{!Environment.StringValue_ID1}</fieldText> //shouldn't be removed
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Display22</name>
-            <fieldText>{!Environment.StringValue_ID2}</fieldText>
+            <fieldText>{!Environment.StringValue_ID2}</fieldText> //shouldn't be removed
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
