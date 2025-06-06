@@ -40,12 +40,12 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Display11</name>
-            <fieldText>&lt;p&gt;TQDDPJTFD&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Dev{!Environment.StringValue_ID1}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Display22</name>
-            <fieldText>&lt;p&gt;A03269G3DNE&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Dev{!Environment.StringValue_ID2}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
