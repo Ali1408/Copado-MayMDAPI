@@ -130,6 +130,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>AssetId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AttachedToId</fullName>
         <type>Lookup</type>
     </fields>
