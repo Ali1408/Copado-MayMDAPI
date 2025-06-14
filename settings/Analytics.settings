@@ -17,7 +17,6 @@
     <enableAzureDLGen2OutputConnector>false</enableAzureDLGen2OutputConnector>
     <enableCreateLegacyDataflows>true</enableCreateLegacyDataflows>
     <enableCrtSetupLightningUiPref>true</enableCrtSetupLightningUiPref>
-    <enableDashboardCmpRefreshPref>false</enableDashboardCmpRefreshPref>
     <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
     <enableDataCloudReportingPref>true</enableDataCloudReportingPref>
