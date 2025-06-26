@@ -8,6 +8,7 @@
     <enableAuraApexCtrlAuthUserAccessCheckPref>false</enableAuraApexCtrlAuthUserAccessCheckPref>
     <enableAuraApexCtrlGuestUserAccessCheckPref>false</enableAuraApexCtrlGuestUserAccessCheckPref>
     <enableCompileOnDeploy>false</enableCompileOnDeploy>
+    <enableDebugLogsDuringDeployment>false</enableDebugLogsDuringDeployment>
     <enableDisableParallelApexTesting>false</enableDisableParallelApexTesting>
     <enableGaplessTestAutoNum>false</enableGaplessTestAutoNum>
     <enableMngdCtrlActionAccessPref>false</enableMngdCtrlActionAccessPref>
