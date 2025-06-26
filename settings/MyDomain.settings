@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyDomainSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <areLegacyRedirectsMaintained>false</areLegacyRedirectsMaintained>
+    <areLgcyRdirMaintainedWntr26>false</areLgcyRdirMaintainedWntr26>
     <canOnlyLoginWithMyDomainUrl>false</canOnlyLoginWithMyDomainUrl>
     <doesApiLoginRequireOrgDomain>false</doesApiLoginRequireOrgDomain>
     <doesWarnOnForceComRedirect>false</doesWarnOnForceComRedirect>
@@ -16,6 +17,7 @@
     <enableShareBrowserSessionIOSForAuth>false</enableShareBrowserSessionIOSForAuth>
     <instancedUrlRedirectHandling>NoRedirect</instancedUrlRedirectHandling>
     <isFirstPartyCookieUseRequired>false</isFirstPartyCookieUseRequired>
+    <isInstancedApiTrafficBlocked>false</isInstancedApiTrafficBlocked>
     <logRedirections>false</logRedirections>
     <myDomainName>speed-platform-650</myDomainName>
     <myDomainSuffix>MySalesforce</myDomainSuffix>
